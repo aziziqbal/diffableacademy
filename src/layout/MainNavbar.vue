@@ -33,6 +33,14 @@
       <li class="nav-item">
         <router-link v-smooth-scroll class="nav-link" :to="{ name: 'contact' }">KONTAK KAMI</router-link>
       </li>
+      <li class="nav-item">
+        <a v-if="scroll" class="nav-link btn btn-neutral" href="#" style="color:white;background-color:#26B5BD;">
+          <p>Masuk Kelas</p>
+        </a>
+        <a v-else class="nav-link btn btn-neutral" href="#" style="color:black;">
+          <p>Masuk Kelas</p>
+        </a>
+      </li>
     </template>
   </navbar>
 </template>
@@ -43,7 +51,6 @@ import vueSmoothScroll from 'vue2-smooth-scroll'
 import { DropDown, NavbarToggleButton, Navbar, NavLink } from '@/components';
 import { Popover } from 'element-ui';
 Vue.use(vueSmoothScroll)
-
 export default {
   name: 'main-navbar',
   props: {

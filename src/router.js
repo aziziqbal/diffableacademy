@@ -6,7 +6,7 @@ import Contact from './pages/ContacUs.vue'
 import Donasi from './pages/Donasi.vue'
 import MainNavbar from './layout/MainNavbar.vue'
 import MainFooter from './layout/MainFooter.vue'
-
+import Pendaftaran from './pages/pendaftaran.vue'
 Vue.use(Router);
 
 export default new Router({
@@ -44,6 +44,15 @@ export default new Router({
       path: '/contact',
       name: 'contact',
       components: { default: Contact, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: 'black' }
+      }
+    },
+    {
+      path: '/pendaftaran',
+      name: 'pendaftaran',
+      components: { default: Pendaftaran, header: MainNavbar, footer: MainFooter},
       props: {
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: 'black' }

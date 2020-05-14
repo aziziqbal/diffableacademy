@@ -15,7 +15,7 @@
       </label>
     </slot>
 
-    <div :class="[{ 'input-group': hasIcon }]">
+    <div :class="[{ 'input-group': hasIcon }]" style="margin-bottom:15px;">
       <slot name="addonLeft">
         <div v-if="addonLeftIcon" class="input-group-prepend">
           <i class="input-group-text" :class="addonLeftIcon"></i>

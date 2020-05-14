@@ -64,4 +64,8 @@ export default {
   }
 };
 </script>
-<style></style>
+<style>
+.login-page .card-login {
+  max-width: 500px;
+}
+</style>

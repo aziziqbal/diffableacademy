@@ -16,8 +16,8 @@
             Mari Bergabung Bersama Kami
           </div>
           <div class="daftar">
-            <button class="button-edit" size="lg">Murid Difabel</button>
-            <button class="button-edit" size="lg" style="margin-left:20px;">Relawan Pengajar</button>
+            <button @click="pendaftaran('Pelajar / Murid')" class="button-edit" size="lg">Murid Difabel</button>
+            <button @click="pendaftaran('Relawan Pegajar')" class="button-edit" size="lg" style="margin-left:20px;">Relawan Pengajar</button>
           </div>
         </div>
       </div>
@@ -31,6 +31,12 @@ export default {
   bodyClass: 'index-page',
   components: {
     Parallax
+  },
+  methods: {
+    pendaftaran (x) {
+      localStorage.setItem('posisi', x)
+      this.$router.push('/pendaftaran')
+    }
   }
 };
 </script>

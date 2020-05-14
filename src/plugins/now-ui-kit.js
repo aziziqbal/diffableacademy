@@ -7,13 +7,15 @@ import globalComponents from './globalComponents';
 import lang from 'element-ui/lib/locale/lang/en';
 import locale from 'element-ui/lib/locale';
 import VueLazyload from 'vue-lazyload';
-
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
 locale.use(lang);
 
 export default {
   install(Vue) {
     Vue.use(globalDirectives);
     Vue.use(globalMixins);
+    Vue.use(Vuetify);
     Vue.use(globalComponents);
     Vue.use(VueLazyload, {
       observer: true,
