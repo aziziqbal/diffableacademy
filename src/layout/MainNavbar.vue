@@ -34,10 +34,10 @@
         <router-link v-smooth-scroll class="nav-link" :to="{ name: 'contact' }">KONTAK KAMI</router-link>
       </li>
       <li class="nav-item">
-        <a v-if="scroll" class="nav-link btn btn-neutral" href="#" style="color:white;background-color:#26B5BD;">
+        <a v-if="scroll" class="nav-link btn btn-neutral" style="color:white;background-color:#26B5BD;" @click="pindah()">
           <p>Masuk Kelas</p>
         </a>
-        <a v-else class="nav-link btn btn-neutral" href="#" style="color:black;">
+        <a v-else class="nav-link btn btn-neutral" style="color:black;" @click="pindah()">
           <p>Masuk Kelas</p>
         </a>
       </li>
@@ -78,6 +78,9 @@ export default {
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
+    pindah() {
+      window.open('https://kelas.diffableacademy.com')
+    },
     scrollFix: function(hashbang) {
       location.href = hashbang
     },

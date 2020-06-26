@@ -16,8 +16,8 @@
             Mari Bergabung Bersama Kami
           </div>
           <div class="daftar">
-            <button @click="pendaftaran('Pelajar / Murid')" class="button-edit" size="lg">Murid Difabel</button>
-            <button @click="pendaftaran('Relawan Pegajar')" class="button-edit" size="lg" style="margin-left:20px;">Relawan Pengajar</button>
+            <button @click="pindah()" class="button-edit" size="lg">Murid Difabel</button>
+            <!-- <button @click="pindah('Relawan Pegajar')" class="button-edit" size="lg" style="margin-left:20px;">Relawan Pengajar</button> -->
           </div>
         </div>
       </div>
@@ -36,6 +36,9 @@ export default {
     pendaftaran (x) {
       localStorage.setItem('posisi', x)
       this.$router.push('/pendaftaran')
+    },
+    pindah() {
+      window.open('https://kelas.diffableacademy.com')
     }
   }
 };
@@ -85,7 +88,7 @@ export default {
     }
     .button-edit {
       background-color:transparent;
-      border: 1px solid white; 
+      border: 1px solid white;
       color:white;
       font-size: 15px;
       padding:10px;
@@ -109,7 +112,7 @@ export default {
     }
     .button-edit {
       background-color:transparent;
-      border: 1px solid white; 
+      border: 1px solid white;
       color:white;
       font-size: 15px;
       padding:10px;
@@ -120,7 +123,7 @@ export default {
       color:black;
     }
   }
-  
-  
-  
+
+
+
 </style>
